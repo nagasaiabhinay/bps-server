@@ -6,7 +6,9 @@
     "scripts": {
         "dev": "nodemon",
         "build": "rm -rf build && tsc",
-        "start": "node build/server.js"
+        "start": "node build/server.js",
+        "gcp-build": "tsc -p .",
+        "deploy": "gcloud app deploy"
     },
     "author": "itsGKRam",
     "license": "MIT",
