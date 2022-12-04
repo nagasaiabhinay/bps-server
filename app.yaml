@@ -1,2 +1,4 @@
-runtime: nodejs
-env: flex
+runtime: nodejs16
+env: standard
+manual_scaling:
+    instances: 1

@@ -31,7 +31,7 @@ const createOrLoginUser = async (req: Request, res: Response) => {
     });
 
     const token = jwt.sign({ user }, 'BusPassSystem', {
-        expiresIn: '1h',
+        expiresIn: '60d',
         algorithm: 'HS256'
     });
 
@@ -51,7 +51,7 @@ const createOrLoginUser = async (req: Request, res: Response) => {
         Role: 'customer'
     });
 
-    const newToken = jwt.sign({ newUser }, 'BusPassSystem', { expiresIn: '24h', algorithm: 'HS256' });
+    const newToken = jwt.sign({ newUser }, 'BusPassSystem', { expiresIn: '60d', algorithm: 'HS256' });
 
     try {
         await newUser.save();
