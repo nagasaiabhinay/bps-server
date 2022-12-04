@@ -23,6 +23,8 @@ mongoose
     });
 
 const StartServer = () => {
+    router.set('trust proxy', true);
+
     router.use((req: Request, res: Response, next: NextFunction) => {
         Logging.info(`Incoming => Method:[${req.method}] - URL:[${req.url}] - IP:[${req.socket.remoteAddress}]`);
 

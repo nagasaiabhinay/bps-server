@@ -1,0 +1,7 @@
+runtime: nodejs16
+service: default
+env_variables:
+    MONGO_USERNAME: bus-pass-system
+    MONGO_PASSWORD: cloud-computing-project
+    MONGO_CLUSTER: buspasssystem-database.9fmqv
+    SERVER_PORT: 6768
