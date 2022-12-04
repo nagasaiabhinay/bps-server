@@ -7,6 +7,7 @@ const Region = express.Router();
 Region.post('/create-new-region', RegionController.createRegion);
 Region.get('/get-all-regions', RegionController.getAllRegions);
 Region.post('/update-region-by-id', RegionController.updateRegionById);
+Region.delete('/delete-region-by-id', RegionController.deleteRegionById);
 
 // test route
 Region.get('/ping', (req, res) => {

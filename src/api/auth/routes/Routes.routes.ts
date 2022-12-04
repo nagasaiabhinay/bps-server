@@ -6,6 +6,7 @@ const Routes = express.Router();
 Routes.post('/create-new-route', RoutesController.createRoutes);
 Routes.get('/get-all-routes', RoutesController.getAllRoutes);
 Routes.post('/update-route-by-id', RoutesController.updateRouteById);
+Routes.delete('/delete-route-by-id', RoutesController.deleteRouteByID);
 
 // test route
 Routes.get('/ping', (req, res) => {

@@ -179,4 +179,39 @@ const updateRouteById = async (req: Request, res: Response) => {
     }
 };
 
-export default { createRoutes, getAllRoutes, updateRouteById };
+const deleteRouteByID = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.query;
+
+        if (!id) {
+            return res.status(400).json({
+                title: 'Missing fields',
+                message: 'Please fill all the fields',
+                required: `Field "${!id ? 'id' : ''}" is missing`
+            });
+        }
+
+        const routeExists = await RoutesModel.findById(id);
+
+        if (!routeExists) {
+            return res.status(400).json({
+                title: 'Route does not exist',
+                message: 'Route does not exist'
+            });
+        }
+
+        await RoutesModel.findByIdAndDelete(id);
+
+        return res.status(200).json({
+            title: 'Route deleted',
+            message: 'Route deleted successfully'
+        });
+    } catch (error) {
+        return res.status(500).json({
+            title: 'Internal server error',
+            message: error
+        });
+    }
+};
+
+export default { createRoutes, getAllRoutes, updateRouteById, deleteRouteByID };
