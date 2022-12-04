@@ -13,5 +13,5 @@
     "[dotenv]": {
         "editor.defaultFormatter": "foxundermoon.shell-format"
     },
-    "dotenv.enableAutocloaking": true
+    "dotenv.enableAutocloaking": false
 }
