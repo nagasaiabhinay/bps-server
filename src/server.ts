@@ -7,6 +7,7 @@ import { config } from './config/config';
 import Logging from './library/Logging';
 
 const router = express();
+console.log(router);
 
 mongoose
     .connect(config.mongo.url, {
