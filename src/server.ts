@@ -46,7 +46,6 @@ const StartServer = () => {
         next();
     });
 
-    // router.use('/v1', DecryptData, apiRoutes, EncryptData);
     router.use('/v1', apiRoutes);
     router.use('/ping', (req, res) => {
         res.json({

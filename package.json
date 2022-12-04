@@ -10,7 +10,7 @@
         "gcp-build": "tsc -p .",
         "deploy": "gcloud app deploy"
     },
-    "author": "itsGKRam",
+    "author": "nagasaiabhinay",
     "license": "MIT",
     "dependencies": {
         "chalk": "^4.1.2",
